@@ -6,6 +6,24 @@
 	"output": {
 		"abi": [
 			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_kittyId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnKitty",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"constant": true,
 				"inputs": [
 					{
@@ -45,6 +63,28 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_targetDna",
+						"type": "uint256"
+					},
+					{
+						"name": "_species",
+						"type": "string"
+					}
+				],
+				"name": "feedAndMultiply",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -93,7 +133,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"localhost/contracts/zombiefactory.sol": "ZombieFactory"
+			"contracts/zombiefeeding.sol": "ZombieFeeding"
 		},
 		"libraries": {},
 		"optimizer": {
@@ -103,10 +143,16 @@
 		"remappings": []
 	},
 	"sources": {
-		"localhost/contracts/zombiefactory.sol": {
+		"contracts/zombiefactory.sol": {
 			"keccak256": "0xafad00276834ab33ce7097499123c9dcb9629e55143e474529005369d973a9d2",
 			"urls": [
 				"bzzr://41d7ae4966779cbbf1e6edb3a96b8b87d0c0e6b66f59fef5070bcd5331f566d9"
+			]
+		},
+		"contracts/zombiefeeding.sol": {
+			"keccak256": "0xfa760cc1d959b4c294d49df4da2727af68b06b17ef2ba5f1e94dcba52f517e24",
+			"urls": [
+				"bzzr://09466f2af2124d0547447951bb5daa36523880c0ac6a1163bd4ea75ccc2ec072"
 			]
 		}
 	},
