@@ -1,10 +1,28 @@
 {
 	"compiler": {
-		"version": "0.4.26+commit.4563c3fc"
+		"version": "0.4.19+commit.c4cbbb05"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_kittyId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnKitty",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
 			{
 				"constant": true,
 				"inputs": [
@@ -40,6 +58,25 @@
 				"constant": true,
 				"inputs": [
 					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getZombiesByOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
 						"name": "",
 						"type": "uint256"
 					}
@@ -53,6 +90,60 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "setKittyContractAddress",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newDna",
+						"type": "uint256"
+					}
+				],
+				"name": "changeDna",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_targetDna",
+						"type": "uint256"
+					},
+					{
+						"name": "_species",
+						"type": "string"
+					}
+				],
+				"name": "feedAndMultiply",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -81,6 +172,24 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newName",
+						"type": "string"
+					}
+				],
+				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -153,9 +262,8 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/zombiefactory.sol": "ZombieFactory"
+			"contracts/zombiehelper.sol": "ZombieHelper"
 		},
-		"evmVersion": "byzantium",
 		"libraries": {},
 		"optimizer": {
 			"enabled": false,
@@ -165,15 +273,27 @@
 	},
 	"sources": {
 		"contracts/ownable.sol": {
-			"keccak256": "0xc854723957922d4e831752a2e03fb207f2fe51ac291584dd94d46a2ab95dd894",
+			"keccak256": "0xb75642c344e6fc4bae591c5bd481d5078131043cb03c2ab33604af89b5946525",
 			"urls": [
-				"bzzr://91f938b890b578af6b9941c5febf81db15d003c37329107b40f7ef08534fff2c"
+				"bzzr://42aa106c7926cbb84f0054172ca555d5ed729cc5115a2e43fa249e9b84b94250"
 			]
 		},
 		"contracts/zombiefactory.sol": {
 			"keccak256": "0xabc46185fe288521a7e4646b6b8d9bdb706ddb711e42754e9ca5031b730af5d1",
 			"urls": [
 				"bzzr://03603379c47b0071f2744a67f25208a7794e67c605abd3a3ae6eb957562f739e"
+			]
+		},
+		"contracts/zombiefeeding.sol": {
+			"keccak256": "0x64023d3f49787b9302c3df83e934bfb11581cfa786f0613bc3985e3de34c15d2",
+			"urls": [
+				"bzzr://682d111c7ca6cee5247360a77a0415e08022cf8c7b32998542345155ec2e239a"
+			]
+		},
+		"contracts/zombiehelper.sol": {
+			"keccak256": "0x24b1bc665877d23b7e956cf818e217f669bf44dfbd39118c92901ce09a9b8b1f",
+			"urls": [
+				"bzzr://87fdfa1f6eb35c0efd2fba7da047bade825b95b0fd8c08640f449f142fc1f95d"
 			]
 		}
 	},

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.4.19+commit.c4cbbb05"
+		"version": "0.4.26+commit.4563c3fc"
 	},
 	"language": "Solidity",
 	"output": {
@@ -40,6 +40,14 @@
 					{
 						"name": "dna",
 						"type": "uint256"
+					},
+					{
+						"name": "level",
+						"type": "uint32"
+					},
+					{
+						"name": "readyTime",
+						"type": "uint32"
 					}
 				],
 				"payable": false,
@@ -63,6 +71,20 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "setKittyContractAddress",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -102,6 +124,34 @@
 				"type": "function"
 			},
 			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -122,10 +172,34 @@
 				],
 				"name": "NewZombie",
 				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
 			}
 		],
 		"devdoc": {
-			"methods": {}
+			"methods": {
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.\r",
+					"params": {
+						"newOwner": "The address to transfer ownership to.\r"
+					}
+				}
+			}
 		},
 		"userdoc": {
 			"methods": {}
@@ -135,6 +209,7 @@
 		"compilationTarget": {
 			"contracts/zombiefeeding.sol": "ZombieFeeding"
 		},
+		"evmVersion": "byzantium",
 		"libraries": {},
 		"optimizer": {
 			"enabled": false,
@@ -143,16 +218,22 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/zombiefactory.sol": {
-			"keccak256": "0xafad00276834ab33ce7097499123c9dcb9629e55143e474529005369d973a9d2",
+		"contracts/ownable.sol": {
+			"keccak256": "0xc854723957922d4e831752a2e03fb207f2fe51ac291584dd94d46a2ab95dd894",
 			"urls": [
-				"bzzr://41d7ae4966779cbbf1e6edb3a96b8b87d0c0e6b66f59fef5070bcd5331f566d9"
+				"bzzr://91f938b890b578af6b9941c5febf81db15d003c37329107b40f7ef08534fff2c"
+			]
+		},
+		"contracts/zombiefactory.sol": {
+			"keccak256": "0xabc46185fe288521a7e4646b6b8d9bdb706ddb711e42754e9ca5031b730af5d1",
+			"urls": [
+				"bzzr://03603379c47b0071f2744a67f25208a7794e67c605abd3a3ae6eb957562f739e"
 			]
 		},
 		"contracts/zombiefeeding.sol": {
-			"keccak256": "0xfa760cc1d959b4c294d49df4da2727af68b06b17ef2ba5f1e94dcba52f517e24",
+			"keccak256": "0x64023d3f49787b9302c3df83e934bfb11581cfa786f0613bc3985e3de34c15d2",
 			"urls": [
-				"bzzr://09466f2af2124d0547447951bb5daa36523880c0ac6a1163bd4ea75ccc2ec072"
+				"bzzr://682d111c7ca6cee5247360a77a0415e08022cf8c7b32998542345155ec2e239a"
 			]
 		}
 	},
