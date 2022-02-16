@@ -1,10 +1,28 @@
 {
 	"compiler": {
-		"version": "0.4.26+commit.4563c3fc"
+		"version": "0.4.19+commit.c4cbbb05"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_kittyId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnKitty",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
 			{
 				"constant": true,
 				"inputs": [
@@ -45,6 +63,34 @@
 				"type": "function"
 			},
 			{
+				"constant": false,
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getZombiesByOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": true,
 				"inputs": [
 					{
@@ -61,6 +107,38 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "setKittyContractAddress",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newDna",
+						"type": "uint256"
+					}
+				],
+				"name": "changeDna",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -89,6 +167,56 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newName",
+						"type": "string"
+					}
+				],
+				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_fee",
+						"type": "uint256"
+					}
+				],
+				"name": "setLevelUpFee",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_targetId",
+						"type": "uint256"
+					}
+				],
+				"name": "attack",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -161,9 +289,8 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/zombiefactory.sol": "ZombieFactory"
+			"contracts/zombieattack.sol": "ZombieBattle"
 		},
-		"evmVersion": "byzantium",
 		"libraries": {},
 		"optimizer": {
 			"enabled": false,
@@ -178,10 +305,28 @@
 				"bzzr://42aa106c7926cbb84f0054172ca555d5ed729cc5115a2e43fa249e9b84b94250"
 			]
 		},
+		"contracts/zombieattack.sol": {
+			"keccak256": "0x5d82ff8e3d8307607ee30250f19b39001ca40e4ae525b2bb5d8233e7c6dc1b0b",
+			"urls": [
+				"bzzr://27386e5db69a3e3afeefd4d63e2a7df4cb393fabec6a5b5d1570db6cf9aeb4aa"
+			]
+		},
 		"contracts/zombiefactory.sol": {
 			"keccak256": "0xa0aadb19a41e2f9139416aef37af88f3a619b227b16421fc061d464f40794b77",
 			"urls": [
 				"bzzr://92d0d753c1fba6af952631b9454275c5023f44a4947a06f1cab96f1cb5d226c2"
+			]
+		},
+		"contracts/zombiefeeding.sol": {
+			"keccak256": "0x56cdab960862892014467ced4cfdaff1ec57350c220261f2efbf76eeb7b8c1b0",
+			"urls": [
+				"bzzr://d74d135e93b384320434d299fb216485c67b9c0d21f6bdf27bd20512bc9fab8b"
+			]
+		},
+		"contracts/zombiehelper.sol": {
+			"keccak256": "0xf3650894b8dd206f2864efb89e1b12bbd9d10bc6b13ffbdbaa7923016f4c8d36",
+			"urls": [
+				"bzzr://39824cf282376cfa3eb3d3db8aeb7f69058e6d9fc0e34da37f10568a5280f1fd"
 			]
 		}
 	},

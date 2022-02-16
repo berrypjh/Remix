@@ -48,10 +48,27 @@
 					{
 						"name": "readyTime",
 						"type": "uint32"
+					},
+					{
+						"name": "winCount",
+						"type": "uint16"
+					},
+					{
+						"name": "lossCount",
+						"type": "uint16"
 					}
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -128,28 +145,6 @@
 				"constant": false,
 				"inputs": [
 					{
-						"name": "_zombieId",
-						"type": "uint256"
-					},
-					{
-						"name": "_targetDna",
-						"type": "uint256"
-					},
-					{
-						"name": "_species",
-						"type": "string"
-					}
-				],
-				"name": "feedAndMultiply",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
 						"name": "_name",
 						"type": "string"
 					}
@@ -187,6 +182,20 @@
 					}
 				],
 				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_fee",
+						"type": "uint256"
+					}
+				],
+				"name": "setLevelUpFee",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -279,21 +288,21 @@
 			]
 		},
 		"contracts/zombiefactory.sol": {
-			"keccak256": "0xabc46185fe288521a7e4646b6b8d9bdb706ddb711e42754e9ca5031b730af5d1",
+			"keccak256": "0xa0aadb19a41e2f9139416aef37af88f3a619b227b16421fc061d464f40794b77",
 			"urls": [
-				"bzzr://03603379c47b0071f2744a67f25208a7794e67c605abd3a3ae6eb957562f739e"
+				"bzzr://92d0d753c1fba6af952631b9454275c5023f44a4947a06f1cab96f1cb5d226c2"
 			]
 		},
 		"contracts/zombiefeeding.sol": {
-			"keccak256": "0x64023d3f49787b9302c3df83e934bfb11581cfa786f0613bc3985e3de34c15d2",
+			"keccak256": "0x56cdab960862892014467ced4cfdaff1ec57350c220261f2efbf76eeb7b8c1b0",
 			"urls": [
-				"bzzr://682d111c7ca6cee5247360a77a0415e08022cf8c7b32998542345155ec2e239a"
+				"bzzr://d74d135e93b384320434d299fb216485c67b9c0d21f6bdf27bd20512bc9fab8b"
 			]
 		},
 		"contracts/zombiehelper.sol": {
-			"keccak256": "0x24b1bc665877d23b7e956cf818e217f669bf44dfbd39118c92901ce09a9b8b1f",
+			"keccak256": "0xf3650894b8dd206f2864efb89e1b12bbd9d10bc6b13ffbdbaa7923016f4c8d36",
 			"urls": [
-				"bzzr://87fdfa1f6eb35c0efd2fba7da047bade825b95b0fd8c08640f449f142fc1f95d"
+				"bzzr://39824cf282376cfa3eb3d3db8aeb7f69058e6d9fc0e34da37f10568a5280f1fd"
 			]
 		}
 	},

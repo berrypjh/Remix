@@ -91,28 +91,6 @@
 				"constant": false,
 				"inputs": [
 					{
-						"name": "_zombieId",
-						"type": "uint256"
-					},
-					{
-						"name": "_targetDna",
-						"type": "uint256"
-					},
-					{
-						"name": "_species",
-						"type": "string"
-					}
-				],
-				"name": "feedAndMultiply",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
 						"name": "_name",
 						"type": "string"
 					}
@@ -219,9 +197,9 @@
 	},
 	"sources": {
 		"contracts/ownable.sol": {
-			"keccak256": "0xc854723957922d4e831752a2e03fb207f2fe51ac291584dd94d46a2ab95dd894",
+			"keccak256": "0xb75642c344e6fc4bae591c5bd481d5078131043cb03c2ab33604af89b5946525",
 			"urls": [
-				"bzzr://91f938b890b578af6b9941c5febf81db15d003c37329107b40f7ef08534fff2c"
+				"bzzr://42aa106c7926cbb84f0054172ca555d5ed729cc5115a2e43fa249e9b84b94250"
 			]
 		},
 		"contracts/zombiefactory.sol": {
@@ -231,9 +209,9 @@
 			]
 		},
 		"contracts/zombiefeeding.sol": {
-			"keccak256": "0x64023d3f49787b9302c3df83e934bfb11581cfa786f0613bc3985e3de34c15d2",
+			"keccak256": "0x56cdab960862892014467ced4cfdaff1ec57350c220261f2efbf76eeb7b8c1b0",
 			"urls": [
-				"bzzr://682d111c7ca6cee5247360a77a0415e08022cf8c7b32998542345155ec2e239a"
+				"bzzr://d74d135e93b384320434d299fb216485c67b9c0d21f6bdf27bd20512bc9fab8b"
 			]
 		}
 	},

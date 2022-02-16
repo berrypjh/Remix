@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.4.24+commit.e67f0147"
+		"version": "0.4.26+commit.4563c3fc"
 	},
 	"language": "Solidity",
 	"output": {
@@ -43,7 +43,12 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"name": "_initialSupply",
+						"type": "uint256"
+					}
+				],
 				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "constructor"
@@ -70,9 +75,9 @@
 	},
 	"sources": {
 		"contracts/SimpleCoin.sol": {
-			"keccak256": "0x3f8e5f27d2d57b6f1e931a620a6754e0227d6c10fb429bb567c8ee1bbcdf6b82",
+			"keccak256": "0x61fc0c9bd7c394efa84abc05f7fb91cdab779db5eed1a65df8fa0198780d5c59",
 			"urls": [
-				"bzzr://d153ea576459b1b299d2f8f6918165f1a0f8debc2d0c8d542e19510c9f1284ae"
+				"bzzr://271fbbe7d4088fc034aa55070c9c031704b30a4fa31d52d83fe82e2b070d4c15"
 			]
 		}
 	},

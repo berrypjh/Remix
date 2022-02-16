@@ -3,8 +3,8 @@ pragma solidity ^0.4.0;
 contract SimpleCoin {
     mapping (address => uint256) public coinBalance;
 
-    constructor() public {
-        coinBalance [msg.sender] = 10000;
+    constructor(uint256 _initialSupply) public {
+        coinBalance [msg.sender] = _initialSupply;
     }
 
     function transfer(address _to, uint256 _amount) public {
